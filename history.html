@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script src="gtmhead.js"></script>
+	<title>附友會歷史沿革</title>
+	<link rel="icon" href="images/HSNU_Logo_small.png" type="image/ico" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HRM7D7" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="index.html">HSNU Alumni</a></h1>
+		<a href="#nav">Menu</a>
+	</header>
+
+	<!-- Nav -->
+	<div id="navbar">
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html"><img src="images/HSNUA_Flag_small.png" width="40%" height="40%"></a></li>
+				<li><a href="history.html">歷史沿革</a></li>
+				<li><a href="regulation.html">組織章程</a></li>
+				<li><a href="struct.html">組織架構</a></li>
+				<li><a href="project.html">專案計劃</a></li>
+				<li><a href="https://drive.google.com/drive/folders/0B52WM4k566KxZWEtOGlUZEU2VTA?resourcekey=0-gpAMiR6hEhW70yPa7Tymew&usp=sharing"
+						target="_blank">會議記錄</a></li>
+				<li><a href="https://www.facebook.com/hsnuaa" target="_blank">最新消息 (FB)</a></li>
+				<li><a href="university/index.html" target="_blank">大學部附友會</a></li>
+				<li><a href="https://da.hsnuaa.org.tw" target="_blank">數位典藏系統</a></li>
+				<li><a href="world.html">全球各地附友會</a></li>
+				<li><a href="foodmap.html">附友美食地圖</a></li>
+				<li><a href="group.html">附友團體 & 相關連結</a></li>
+				<li><a href="contact.html">聯絡我們 & 線上入會</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="container">
+
+			<header class="major special">
+				<h2>歷史沿革</h2>
+				<p>國立臺灣師範大學附屬高級中學校友會，於102年3月3日復會，為內政部核准之社會團體 立案字號 1020140557</p>
+			</header>
+			<div class="image fit"><img src="images/history3.jpg" alt="南樓古堡" /></div>
+			<p>校友會沿革及各屆理監事會成立記事</p>
+			<div id="history-list"></div>
+		</div>
+	</section>
+
+	<div id="footer"></div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="components.js"></script>
+	<script>
+		function renderHistoryList(list, containerId) {
+			const container = document.getElementById(containerId);
+			container.innerHTML = list.map(item =>
+				`<p><strong>${item.year}${item.month}</strong> ${item.description.replace(/\n/g, "<br/>")}</p>`
+			).join('');
+		}
+		fetch('history-data.json')
+			.then(response => response.json())
+			.then(data => {
+				renderHistoryList(data, 'history-list');
+			});
+	</script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+
+</body>
+
+</html>

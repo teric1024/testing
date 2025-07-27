@@ -1,0 +1,18 @@
+{
+  "america": [
+    { "name": "南加州師大附中校友會", "url": "http://hsntnu-scal.com/HSNTNU/" },
+    { "name": "大華府師大附中校友會", "url": "http://www.fc-dc.org/OldSite/Fu_Chung/Fu_Chung.html" },
+    { "name": "休士頓師大附中校友會", "url": "http://houfuchung99.webnode.tw/" },
+    { "name": "大拉斯維加斯師大附中校友會", "url": "#" },
+    { "name": "大紐約師大附中校友聯誼會", "url": "https://www.facebook.com/groups/1490249727910756" },
+    { "name": "北加州師大附中校友聯誼會", "url": "https://www.facebook.com/groups/hsnuncal/" }
+  ],
+  "asia": [
+    { "name": "國立臺灣師範大學附屬高級中學校友會", "url": "index.html" },
+    { "name": "華北師大附中校友會", "url": "#" },
+    { "name": "華東師大附中校友會", "url": "#" },
+    { "name": "華南師大附中校友會", "url": "#" },
+    { "name": "華西師大附中校友會", "url": "#" },
+    { "name": "大學部師大附中校友會", "url": "university/index.html" }
+  ]
+} 

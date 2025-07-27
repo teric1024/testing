@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script src="gtmhead.js"></script>
+	<title>全球各地附友會</title>
+	<link rel="icon" href="images/HSNU_Logo_small.png" type="image/ico" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<style>
+		a:hover {
+			color: #666;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HRM7D7" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="index.html">HSNU Alumni</a></h1>
+		<a href="#nav">Menu</a>
+	</header>
+
+	<!-- Nav -->
+	<div id="navbar">
+		<nav id="nav">
+			<ul class="links">
+				<li><a href="index.html"><img src="images/HSNUA_Flag_small.png" width="40%" height="40%"></a></li>
+				<li><a href="history.html">歷史沿革</a></li>
+				<li><a href="regulation.html">組織章程</a></li>
+				<li><a href="struct.html">組織架構</a></li>
+				<li><a href="project.html">專案計劃</a></li>
+				<li><a href="https://drive.google.com/drive/folders/0B52WM4k566KxZWEtOGlUZEU2VTA?resourcekey=0-gpAMiR6hEhW70yPa7Tymew&usp=sharing"
+						target="_blank">會議記錄</a></li>
+				<li><a href="https://www.facebook.com/hsnuaa" target="_blank">最新消息 (FB)</a></li>
+				<li><a href="university/index.html" target="_blank">大學部附友會</a></li>
+				<li><a href="https://da.hsnuaa.org.tw" target="_blank">數位典藏系統</a></li>
+				<li><a href="world.html">全球各地附友會</a></li>
+				<li><a href="foodmap.html">附友美食地圖</a></li>
+				<li><a href="group.html">附友團體 & 相關連結</a></li>
+				<li><a href="contact.html">聯絡我們 & 線上入會</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="container">
+			<header class="major special">
+				<h2>全球各地附友會</h2>
+				<p>附中校風甲天下，藍天之子耀四方</p>
+			</header>
+			<div class="image fit"><img src="images/world.jpg" alt="" /></div>
+			<div class="row">
+				<div class="6u 12u$(xsmall)">
+					<br>
+					<h3>美國地區</h3>
+					<div id="america-list"></div>
+				</div>
+				<div class="6u$ 12u$(xsmall)">
+					<br>
+					<h3>東亞地區</h3>
+					<div id="asia-list"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="footer"></div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script src="components.js"></script>
+	<script>
+		function renderWorldList(list, containerId) {
+			const container = document.getElementById(containerId);
+			container.innerHTML = '<blockquote>' + list.map(item =>
+				`<a href="${item.url}" target="_blank"><h4>${item.name}</h4></a>`
+			).join('') + '</blockquote>';
+		}
+		fetch('world-data.json')
+			.then(response => response.json())
+			.then(data => {
+				renderWorldList(data.america, 'america-list');
+				renderWorldList(data.asia, 'asia-list');
+			});
+	</script>
+
+</body>
+
+</html>

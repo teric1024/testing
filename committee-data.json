@@ -1,0 +1,26 @@
+{
+  "directors": [
+    { "title": "理事長", "name": "H542 李如玉" },
+    { "title": "副理事長", "name": "H590 陳志榮" },
+    { "title": "副理事長", "name": "H669 張鈿浤" },
+    { "title": "常務理事", "name": "H430 高賢忠" },
+    { "title": "常務理事", "name": "H746 徐子雯" },
+    { "title": "理事", "name": "H400/401 李仁明" },
+    { "title": "理事", "name": "H466 侯福義" },
+    { "title": "理事", "name": "H537 陳佳興" },
+    { "title": "理事", "name": "H571 林奕華" },
+    { "title": "理事", "name": "H576 游翼源" },
+    { "title": "理事", "name": "H590 李尚仁" },
+    { "title": "理事", "name": "H592 鄭偉忠" },
+    { "title": "理事", "name": "H638 朱偉仁" },
+    { "title": "理事", "name": "H675 陳燕菁" },
+    { "title": "理事", "name": "H785 蔡霈縈" }
+  ],
+  "supervisors": [
+    { "title": "常務監事", "name": "H539 官彥均" },
+    { "title": "監事", "name": "N26 魏兆奎" },
+    { "title": "監事", "name": "H400/401 楊聰賢" },
+    { "title": "監事", "name": "H624 陳昶芬" },
+    { "title": "監事", "name": "K027 黃尹春" }
+  ]
+} 
